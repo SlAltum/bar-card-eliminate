@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+#outer-container {
+    padding: 5px;
+}
+
+#inner-container {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: gray;
+    padding: 10px;
+}
+
+#title {
+    margin: 10px;
+}
+
+#cards-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+.cards-row {
+    display: flex;
+}
+
+.card {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: 0.5s ease-in-out;
+}
+
+.card.unflipped {
+    background-image: radial-gradient(black,brown);
+    transform: rotateY(180deg);
+    transition: 0.5s ease-in-out;
+}
